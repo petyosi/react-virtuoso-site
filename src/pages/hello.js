@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "../components/layout"
-import Source from "../components/source"
-import Hello from "../examples/hello"
+import React from 'react';
+import Layout from '../components/layout';
+import Source from '../components/source';
+import Hello from '../examples/hello';
 
 export default () => (
-  <Layout>
+  <Layout sidebar={() => <Source path="Hello" />}>
     <h2> 100 000 Items </h2>
     <p>
       The Virtuoso component is built for the display of huge lists - you do not
@@ -19,10 +19,9 @@ export default () => (
     </p>
 
     <p>
-      For a detailed overview and usage instructions, check the{" "}
+      For a detailed overview and usage instructions, check the{' '}
       <a href="https://github.com/petyosi/react-virtuoso">Github README</a>.
     </p>
     <Hello />
-    <Source path="Hello" />
   </Layout>
-)
+);
