@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "../components/layout"
-import Source from "../components/source"
-import Example from "../examples/TopItems"
+import React from 'react';
+import Layout from '../components/layout';
+import Source from '../components/source';
+import Example from '../examples/TopItems';
 
 export default () => (
-  <Layout>
+  <Layout sidebar={() => <Source path="TopItems" />}>
     <h2>Top Items Example</h2>
     <p>
       The Virtuoso component accepts an optional <code>topItems</code> number
@@ -17,6 +17,5 @@ export default () => (
     </p>
 
     <Example />
-    <Source path="TopItems" />
   </Layout>
-)
+);

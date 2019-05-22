@@ -1,10 +1,10 @@
-import React from "react"
-import Layout from "../components/layout"
-import Source from "../components/source"
-import Hello from "../examples/AutoResizing"
+import React from 'react';
+import Layout from '../components/layout';
+import Source from '../components/source';
+import Example from '../examples/AutoResizing';
 
 export default () => (
-  <Layout>
+  <Layout sidebar={() => <Source path="AutoResizing" />}>
     <h2>Automatic Resizing</h2>
     <p>
       The Virtuoso component will automatically handle changes of the
@@ -15,7 +15,6 @@ export default () => (
       Resize your browser and scroll the list around &ndash; the items
       reposition correctly without overlap.
     </p>
-    <Hello />
-    <Source path="AutoResizing" />
+    <Example />
   </Layout>
-)
+);
