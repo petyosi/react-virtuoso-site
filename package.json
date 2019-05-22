@@ -8,22 +8,30 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "rm -rf public && gatsby build && echo 'virtuoso.dev' > 'public/CNAME' && gh-pages --remote virtuoso -d public -r git@github.com:petyosi/react-virtuoso.git"
   },
   "dependencies": {
     "faker": "^4.1.0",
     "gatsby": "^2.5.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-typography": "^2.2.13",
     "lodash": "^4.17.11",
     "prismjs": "^1.16.0",
     "react": "link:../react-virtuoso/node_modules/react/",
     "react-dom": "link:../react-virtuoso/node_modules/react-dom/",
+    "react-github-btn": "^1.0.5",
     "react-helmet": "^5.2.1",
+    "react-markdown": "^4.0.8",
+    "react-typography": "^0.16.19",
     "react-virtuoso": "link:../react-virtuoso/",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "typography": "^0.16.19",
+    "typography-theme-github": "^0.16.19"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.3.0",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.1"
   }
 }

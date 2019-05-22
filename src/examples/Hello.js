@@ -12,6 +12,6 @@ export default () => (
     totalCount={100000}
     overscan={200}
     item={GenerateItem}
-    style={{ height: '400px', width: '80%', maxWidth: '600px' }}
+    style={{ height: '400px', width: '350px' }}
   />
 )

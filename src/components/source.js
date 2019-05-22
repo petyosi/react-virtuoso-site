@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useCallback } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Prism from "./prism"
-import sdk from "@stackblitz/sdk"
+import React, { useRef, useEffect, useCallback } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Prism from './prism'
+import sdk from '@stackblitz/sdk'
 
 export default ({ path }) => {
   const data = useStaticQuery(graphql`
@@ -13,10 +13,13 @@ export default ({ path }) => {
     }
   `)
 
-  const source = data.allSources.find(node => node.key === path).source
-  const fakeData = data.allSources.find(node => node.key === "FakeData").source
+  const source = data.allSources.find(node => node.key === path)
+    .source
+  const fakeData = data.allSources.find(
+    node => node.key === 'FakeData'
+  ).source
   const exampleComponents = data.allSources.find(
-    node => node.key === "ExampleComponents"
+    node => node.key === 'ExampleComponents'
   ).source
 
   const openStackblitz = useCallback(() => {
@@ -33,25 +36,25 @@ ReactDOM.render(<Example />, document.getElementById('root'))
     // Create the project payload.
     const project = {
       files: {
-        "example.js": source,
-        "FakeData.js": fakeData,
-        "ExampleComponents.js": exampleComponents,
-        "index.js": index,
-        "index.html": html,
+        'example.js': source,
+        'FakeData.js': fakeData,
+        'ExampleComponents.js': exampleComponents,
+        'index.js': index,
+        'index.html': html,
       },
-      title: "React Virtuoso Example",
-      description: "Created with <3 by the StackBlitz SDK!",
-      template: "create-react-app",
+      title: 'React Virtuoso Example',
+      description: 'Created with <3 by the StackBlitz SDK!',
+      template: 'create-react-app',
       dependencies: {
-        "react-virtuoso": "0.4.1",
-        faker: "4.1.0",
-        lodash: "4.17.11",
-        "styled-components": "4.2.0",
+        'react-virtuoso': 'latest',
+        faker: '4.1.0',
+        lodash: '4.17.11',
+        'styled-components': '4.2.0',
       },
-      tags: ["react-virtuoso"],
+      tags: ['react-virtuoso'],
     }
 
-    sdk.openProject(project, { openFile: "example.js" })
+    sdk.openProject(project, { openFile: 'example.js' })
   }, [])
 
   const codeRef = useRef(null)
@@ -60,13 +63,25 @@ ReactDOM.render(<Example />, document.getElementById('root'))
     codeRef.current.innerHTML = Prism.highlight(
       source,
       Prism.languages.jsx,
-      "jsx"
+      'jsx'
     )
   }, [])
 
   return (
     <>
-      <button onClick={openStackblitz}>to stackblitz</button>
+      <button
+        onClick={openStackblitz}
+        style={{
+          background: 'transparent',
+          border: '1px solid white',
+          color: 'white',
+          margin: '1rem',
+          fontSize: '1.04rem',
+        }}
+      >
+        Edit in StackBlitz
+      </button>
+
       <pre className="language-jsx">
         <code ref={codeRef} className="language-jsx">
           {source}

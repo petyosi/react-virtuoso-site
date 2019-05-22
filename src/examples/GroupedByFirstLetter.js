@@ -15,7 +15,7 @@ export default () => {
 
   return (
     <GroupedVirtuoso
-      style={{ height: '500px', width: '500px' }}
+      style={{ height: '350px', width: '400px' }}
       groupCounts={groupCounts}
       group={index => {
         return <ExampleGroup>{groups[index]}</ExampleGroup>

@@ -5,6 +5,7 @@ import {
   ExampleListItem,
   ExampleAvatar,
   ExampleUserInfo,
+  ExampleImgAvatar,
 } from './ExampleComponents'
 
 export default () => {
@@ -13,9 +14,8 @@ export default () => {
   return (
     <Virtuoso
       style={{
-        height: '350px',
-        width: '80%',
-        maxWidth: '500px',
+        height: '400px',
+        width: '350px',
       }}
       totalCount={100}
       scrollingStateChange={scrolling => {
@@ -28,21 +28,11 @@ export default () => {
         return (
           <ExampleListItem even={index % 2 === 0}>
             {isScrolling ? (
-              <ExampleAvatar
-                style={{ backgroundColor: '#ccc' }}
-              >
+              <ExampleAvatar style={{ backgroundColor: '#ccc' }}>
                 &nbsp;
               </ExampleAvatar>
             ) : (
-              <img
-                src={user.avatar}
-                style={{
-                  width: '50px',
-                  height: '50px',
-                  flex: 'none',
-                  borderRadius: '50%',
-                }}
-              />
+              <ExampleImgAvatar src={user.avatar} />
             )}
 
             <ExampleUserInfo title={title}>

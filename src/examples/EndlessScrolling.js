@@ -42,7 +42,8 @@ export default () => {
 
   return (
     <Virtuoso
-      style={{ width: '400px', height: '300px' }}
+      style={{ width: '350px', height: '400px' }}
+      overscan={500}
       totalCount={total}
       item={GenerateItem}
       endReached={() => loadMore()}

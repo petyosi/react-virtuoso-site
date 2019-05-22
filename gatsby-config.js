@@ -7,7 +7,15 @@
 
 module.exports = {
   siteMetadata: {
-    title: "React Virtuoso - an elegant virtual list component",
+    title: 'React Virtuoso - an elegant virtual list component',
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography',
+      },
+    },
+  ],
 }

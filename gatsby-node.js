@@ -1,4 +1,4 @@
-const fs = require("fs")
+const fs = require('fs')
 
 module.exports = {
   sourceNodes: ({ actions }) => {
@@ -15,11 +15,20 @@ module.exports = {
   createResolvers: ({ createResolvers }) => {
     const resolvers = {
       Query: {
+        readme: {
+          type: `String!`,
+          resolve: (source, args, context, info) => {
+            return fs
+              .readFileSync(`./src/content/README.md`)
+              .toString()
+          },
+        },
+
         allSources: {
           type: `[Source!]!`,
           resolve: (source, args, context, info) => {
-            return fs.readdirSync("./src/examples/").map(fileName => {
-              const key = fileName.split(".")[0]
+            return fs.readdirSync('./src/examples/').map(fileName => {
+              const key = fileName.split('.')[0]
               const source = fs
                 .readFileSync(`./src/examples/${fileName}`)
                 .toString()
