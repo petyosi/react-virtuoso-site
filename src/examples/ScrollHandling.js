@@ -19,7 +19,6 @@ export default () => {
       }}
       totalCount={100}
       scrollingStateChange={scrolling => {
-        console.log({ scrolling })
         setIsScrolling(scrolling)
       }}
       item={index => {

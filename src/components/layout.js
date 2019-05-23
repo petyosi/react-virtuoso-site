@@ -9,7 +9,13 @@ export default ({ children, sidebar }) => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>React Virtuoso</title>
+      <title>
+        React Virtuoso - virtual list component + batteries included
+      </title>
+      <meta
+        name="keywords"
+        content="react virtualized list, react virtual window, dynamic height, react virtual list react grouped virtual list, react list component autosize, react virtuoso, react virtualized alternative"
+      />
     </Helmet>
 
     <div id="root">

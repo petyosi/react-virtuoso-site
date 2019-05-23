@@ -2,9 +2,16 @@ import React from 'react'
 import Layout from '../components/layout'
 import Source from '../components/source'
 import Example from '../examples/GroupWithLoadOnDemand'
+import { Helmet } from 'react-helmet'
 
 export default () => (
   <Layout sidebar={() => <Source path="GroupWithLoadOnDemand" />}>
+    <Helmet>
+      <meta
+        name="description"
+        content="React Grouped Virtuoso live example with records grouped by first letter"
+      />
+    </Helmet>
     <h2>Grouped by First Letter (Load on Demand)</h2>
     <p>
       The <code>GroupedVirtuoso</code> component accepts a{' '}

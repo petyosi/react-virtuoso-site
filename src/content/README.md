@@ -1,6 +1,7 @@
-**React Virtuoso** is a simple, easy to use React component made to render huge data lists. Out of the box, Virtuoso:
+**React Virtuoso** is a simple, easy to use React virtualized list component that can render huge data sets. 
+Out of the box, Virtuoso:
 
-- Handles gracefully variable sized items; no manual measurements or hard-coding of item heights;
+- Handles items with variable dynamic height; no manual measurements or hard-coding of item heights necessary;
 - Supports grouping with sticky group headers;
 - Automatically handles content resizing;
 - Can render footer at the end of the list;
@@ -20,33 +21,39 @@ Or, if yarn is your thing:
 yarn add react-virtuoso
 ```
 
-Then, put the component somewhere in your tree:
+Add the component to your application:
 
 ```jsx
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { Virtuoso } from 'react-virtuoso'
 
-const App = () => {
-  return (
-    <Virtuoso style={{ width: '200px', height: '400px' }} totalCount={200} item={index => <div>Item {index}</div>} />
-  )
-}
+const App = () => (
+  <Virtuoso 
+    style={{ width: '300px', height: '400px' }} 
+    totalCount={200} 
+    item={index => <div>Item {index}</div>} 
+  />
+)
+
 
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
-### Add a Footer
+### Footer
 
-The component accepts an optional `footer` [render property](https://reactjs.org/docs/render-props.html), the contents of which are rendered at the bottom of the list. The footer can be used to host a "load more" button or an indicator that the user has reached the end of the list.
+The component accepts an optional 
+`footer` [render property](https://reactjs.org/docs/render-props.html), 
+which is rendered after all items. 
+The footer can be used to host a "load more" button 
+or an indicator that the user has reached the end of the list.
 
 Check the [footer](/footer), [press load more](/press-to-load-more) and [endless scrolling](/endless-scrolling) examples for practical applications of the footer.
 
 ### Pinned Items
 
-The component accepts an optional `topItems` property, that specifies how many of the items to keep "pinned" at the top of the list.
-
-Check the [top items](/top-items) example for a live version of the above.
+The component accepts an optional `topItems` property, that specifies 
+how many of the items to keep "pinned" at the top of the list.  Check the [top items](/top-items) example.
 
 ### Grouping
 
@@ -55,9 +62,9 @@ The package exports two components - `Virtuoso` and `GroupedVirtuoso`.
 The grouped component is similar to the flat one, with the following differences:
 
 * Instead of `totalCount`, the component accepts `groupedCounts: number[]`, which specifies the amount of items in each group. 
-  For example, passing `[20, 30]` will cause the component to render two groups with 20 and 30 items respectively;
+  For example, passing `[20, 30]` will render two groups with 20 and 30 items each;
 * In addition the `item` render prop, the component requires an additional `group` render prop, 
-  which renders the group header. The property receives the zero-based group index as a parameter;
+  which renders the **group header**. The `group` callback receives the zero-based group index as a parameter;
 * The `item` render prop gets called with an additional second parameter, `groupIndex: number`.
 
 Check the 
@@ -68,13 +75,26 @@ examples.
 
 ## Tweaking Performance
 
-Several factors affect the component performance, the most important being the _size of the visible area_. Redrawing large items takes more time and reduces the frame rate. To see if this affects your case, change the component `style` property to something like `{{width: '200px'}}` and see if the frame rate gets better.
+Several factors affect the component performance. 
+The first and most important one _size of the visible area_. 
+Redrawing large items takes more time and reduces the frame rate. 
+To see if this affects you, reduce the component width or height; Set the `style` property 
+to something like `{{width: '200px'}}`.
 
-Next, if the content in the item prop is complex / large, use [React.memo](https://reactjs.org/docs/react-api.html#reactmemo).
+Next, if the content in the item prop is complex / large, 
+use [React.memo](https://reactjs.org/docs/react-api.html#reactmemo).
 
-You can experiment with the `overscan` property which specifies how much more to render in addition to the viewport visible height. For example, if the component is `100px` tall, setting the `overscan` to `150` will cause the list to render **at least** `250px` tall content. In a nutshell, increasing the `overscan` causes less frequent re-renders, but makes each re-render more expensive (because more items will get replaced).
+You can experiment with the `overscan` property which specifies 
+how much more to render in addition to the viewport visible height. 
+For example, if the component is `100px` tall, setting the `overscan` 
+to `150` will cause the list to render **at least** `250px` of content. 
+In a nutshell, increasing the `overscan` causes less frequent re-renders, 
+but makes each re-render more expensive (because more items will get replaced).
 
-Loading images and displaying complex components while scrolling can cause hiccups and frame skips. To fix that, you can hook to the `scrollingStateChange` callback and replace the complex content in the item render prop with a simplified one. Check the [scroll handling example](/scroll-handling) for a possible implementation.
+Loading images and displaying complex components while scrolling can cause jank. 
+To fix that, you can hook to the `scrollingStateChange` callback and replace 
+the complex content in the item render prop with a simplified one. 
+Check the [scroll handling example](/scroll-handling) for a possible implementation.
 
 Finally, as a last resort, you can speed up things by hard-coding the size of the items using the `itemHeight` property. This will cause the component to stop measuring and observing the item sizes. Be careful with that option; ensure that the items won't change size on different resolutions.
 
@@ -173,11 +193,3 @@ To avoid that, if you are putting paragraphs and headings inside the `item`, mak
 Virtuoso uses `position: sticky` to keep the virtual viewport at top of the scroller.
 [This does not work in IE 11](https://caniuse.com/#feat=css-sticky).
 Please open an issue (or even, PR) if you need this - it should be possible to implement a fallback mechanism using `position: absolute`.
-
-## Author
-
-Petyo Ivanov [@petyosi](https://twitter.com/petyosi)
-
-## License
-
-MIT License.
