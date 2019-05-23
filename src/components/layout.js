@@ -3,107 +3,13 @@ import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import GitHubButton from 'react-github-btn'
 import logo from '../assets/logo.svg'
+import '../styles/site.css'
 
 export default ({ children, sidebar }) => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
       <title>React Virtuoso</title>
-      <style>
-        {`
-        html, body, body > div, body > div > div, body > div > div > div {
-          margin: 0;
-          padding: 0;
-          height: 100%;
-          min-height: 100%;
-        }
-
-        body > div > div > div {
-          align-items: stretch;
-        }
-
-        #root {
-          display: flex;
-        }
-
-        #main {
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-        }
-
-        #sidebar, pre {
-          background: #272822;
-        }
-
-        #sidebar {
-            overflow: auto;
-        }
-
-        pre {
-          padding: 0.5rem;
-          margin-bottom: 2rem;
-          white-space: pre-wrap !important;
-        }
-
-        #sidebar pre {
-          white-space: pre-wrap;
-        }
-
-        code[class*="language-"] {
-          white-space: pre-wrap !important;
-        }
-
-        #content {
-            padding: 2rem 7rem 2rem 0;
-        }
-
-        #nav {
-          flex-grow: 0;
-          width: 20rem;
-          flex-basis: 20rem;
-          flex-shrink: 0;
-        }
-
-        @media only screen and (max-width: 768px) {
-          #root {
-            flex-direction: column;
-          }
-
-          #sidebar {
-            display: none;
-          }
-
-          #content {
-            padding-left: 2rem;
-          }
-        }
-
-        @media only screen and (min-width: 1280px) {
-          #main {
-            flex-direction: row;
-            align-items: stretch;
-          }
-
-          #content {
-            flex-grow: 1;
-            flex-shrink: 2;
-            min-width: 350px;
-            max-width: 750px;
-          }
-
-          #sidebar {
-            flex-grow: 5;
-            flex-shrink: 0;
-          }
-        }
-
-
-
-
-
-          `}
-      </style>
     </Helmet>
 
     <div id="root">
@@ -119,14 +25,20 @@ export default ({ children, sidebar }) => (
         <nav style={{ padding: '2rem' }}>
           <dl>
             <dd>
-              <Link to="/">Introduction</Link>
+              <Link to="/" activeClassName="active">
+                Introduction
+              </Link>
             </dd>
             <dt>Features Overview</dt>
             <dd>
-              <Link to="/hello">10000 Items</Link>
+              <Link to="/hello" activeClassName="active">
+                10000 Items
+              </Link>
             </dd>
             <dd>
-              <Link to="/top-items">Top Items</Link>
+              <Link to="/top-items" activeClassName="active">
+                Top Items
+              </Link>
             </dd>
             <dd>
               <Link to="/footer">Footer</Link>
@@ -170,6 +82,9 @@ export default ({ children, sidebar }) => (
           >
             Star
           </GitHubButton>
+        </div>
+        <div style={{ margin: '2rem 2rem 0 2rem' }}>
+          <img src="https://flat.badgen.net/bundlephobia/minzip/react-virtuoso" />
         </div>
       </div>
 
