@@ -7,6 +7,9 @@ Out of the box, Virtuoso:
 - Can render footer at the end of the list;
 - Can pin the first `N` items to the top of the list.
 
+React Virtuoso is as small as possible ([Bundlephobia check](https://bundlephobia.com/result?p=react-virtuoso)), 
+with a single dependency to the resize observer polyfill.
+
 ## Get Started
 
 Install the package in your React project:
