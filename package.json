@@ -25,6 +25,7 @@
     "react-github-btn": "^1.0.5",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",
+    "react-twitter-embed": "^2.0.8",
     "react-typography": "^0.16.19",
     "react-virtuoso": "link:../react-virtuoso/",
     "styled-components": "^4.2.0",

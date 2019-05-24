@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
 import GitHubButton from 'react-github-btn'
+import { TwitterFollowButton } from 'react-twitter-embed'
 import logo from '../assets/logo.svg'
 import '../styles/site.css'
 
@@ -101,6 +102,9 @@ export default ({ children, sidebar }) => (
           </GitHubButton>
         </div>
         <div style={{ margin: '2rem 2rem 0 2rem' }}>
+          <TwitterFollowButton screenName={'petyosi'} />
+        </div>
+        <div style={{ margin: '1rem 2rem 0 2rem' }}>
           <img src="https://flat.badgen.net/bundlephobia/minzip/react-virtuoso" />
         </div>
       </div>
