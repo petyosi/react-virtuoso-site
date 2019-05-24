@@ -55,6 +55,14 @@ export default ({ children, sidebar }) => (
             <dd>
               <Link to="/scroll-handling">Scroll Handling</Link>
             </dd>
+            <dd>
+              <Link to="/scroll-to-index">Scroll to Index</Link>
+            </dd>
+            <dd>
+              <Link to="/custom-scroll-container">
+                Custom Scroll Container
+              </Link>
+            </dd>
             <dt>Grouping</dt>
             <dd>
               <Link to="/grouped-numbers">Grouped Numbers</Link>
@@ -69,12 +77,15 @@ export default ({ children, sidebar }) => (
                 Grouped with Load on Demand
               </Link>
             </dd>
+            <dd>
+              <Link to="/scroll-to-group">Scroll to Group</Link>
+            </dd>
             <dt>Scenarios</dt>
             <dd>
               <Link to="/press-to-load-more">Press to Load More</Link>
             </dd>
             <dd>
-              <Link to="/endless-scrolling">Endless scrolling</Link>
+              <Link to="/endless-scrolling">Endless Scrolling</Link>
             </dd>
           </dl>
         </nav>

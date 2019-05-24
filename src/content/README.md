@@ -76,6 +76,24 @@ Check the
 [groups with load on demand](/grouped-with-load-on-demand) 
 examples. 
 
+### Scroll to Index
+
+Both `Virtuoso` and `GroupedVirtuoso` provide an imperative `scrollToIndex` method with 
+optional `align` that scrolls the specified item into view. `GroupedVirtuoso` exports 
+convenience callback to obtain the group item indices in order to scroll to a given group.
+
+Check the 
+[scroll to index](/scroll-to-index) and 
+[scroll to group](/scroll-to-group) 
+examples for possible usage of the method. 
+
+### Customize the Scroll Container
+
+You can swap the virutoso scroller implementation in order to add custom scroll logic or to 
+integrade a custom scrolling library (like [React scrollbars](https://github.com/malte-wessel/react-custom-scrollbars)).
+
+Check the [custom scroll container](/custom-scroll-container) example for a starting point.
+
 ## Tweaking Performance
 
 Several factors affect the component performance. 
@@ -116,6 +134,10 @@ Mandatory. Specifies how each item gets rendered. The callback receives the zero
 Optional; most often, you will need to tweak the size of the component by setting `width` and `height`.
 The style is passed to the outermost `div` element of the component.
 
+### `className?: string`
+
+Optional; sets the CSS class of the outermost element of the component.
+
 ### `footer?: () => ReactElement`
 
 Optional. Defines content to be rendered at the bottom of the list.
@@ -138,6 +160,11 @@ Gets called when the user starts / stops scrolling. Can be used to hide complex 
 
 Can be used to improve performance if the rendered items are of known size. Setting it causes the component to skip item measurements. See the Tweaking Performance section for more details.
 
+### `ScrollContainer: React.FC`
+
+Optional. Can be used to replace and extend the scrollable element of the component. 
+Check the [custom scroll container](/custom-scroll-container) for sample usage.
+
 ## Properties of the `GroupedVirtuoso` Component
 
 ### `groupCounts: number[]`
@@ -156,6 +183,10 @@ Mandatory. Specifies how each each group header gets rendered. The callback rece
 
 Works just like the `style` property of the flat component.
 
+### `className?: string`
+
+Works just like the `className` property of the flat component.
+
 ### `footer?: () => ReactElement`
 
 Works just like the `footer` property of the flat component.
@@ -171,6 +202,16 @@ Works just like the `endReached` callback of the flat component.
 ### `scrollingStateChange?: (isScrolling: boolean) => void`
 
 Works just like the `scrollingStateChange` callback of the flat component.
+
+
+## Methods (available in both `Virtuoso` and `GroupedVirtuoso`)
+
+### `scrollToIndex(location: number | { index: number, align: 'start'|'center'|'end' }): void`
+
+Scrolls the specified item into view. Passing the longer form allows the item to be aligned to the top, center or end of the list.
+
+**Notice:** having variable height items in the view being scrolled to can displace the item. 
+If this is your case, you can use `align: 'center'` to make sure that the entire item is visible.
 
 ## Gotchas
 

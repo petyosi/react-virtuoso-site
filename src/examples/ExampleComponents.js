@@ -30,14 +30,14 @@ export const ExampleListItem = styled.div`
   background-color: ${props => (props.even ? '#fff' : '#f4f4f4')};
   border-radius: 3px;
   display: flex;
-  padding: 1rem;
+  padding: 12px;
   color: #333;
 `
 
 export const ExampleGroup = styled.div`
   background-color: rgba(200, 200, 200, 0.8);
   color: #333;
-  padding: 1rem;
+  padding: 9px;
   font-weight: bold;
 `
 

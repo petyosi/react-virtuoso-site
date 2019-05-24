@@ -94,3 +94,15 @@ a[aria-current*='page'] {
     flex-shrink: 0;
   }
 }
+
+.knobs {
+  margin: 1rem;
+  padding: 0;
+}
+
+.knobs li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
