@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Prism from './prism'
 import sdk from '@stackblitz/sdk'
 
-export default ({ path }) => {
+export default ({ path, libs = {} }) => {
   const data = useStaticQuery(graphql`
     query SourceQuery {
       allSources {
@@ -50,6 +50,7 @@ ReactDOM.render(<Example />, document.getElementById('root'))
         faker: '4.1.0',
         lodash: '4.17.11',
         'styled-components': '4.2.0',
+        ...libs,
       },
       tags: ['react-virtuoso'],
     }

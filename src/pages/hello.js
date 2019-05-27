@@ -25,13 +25,7 @@ export default () => (
       It is up to you to build and return the respective content for
       it.
     </p>
-    <p>
-      For a detailed overview and usage instructions, check the{' '}
-      <a href="https://github.com/petyosi/react-virtuoso">
-        Github README
-      </a>
-      .
-    </p>
+
     <Example />
   </Layout>
 )

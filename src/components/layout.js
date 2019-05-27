@@ -59,11 +59,6 @@ export default ({ children, sidebar }) => (
             <dd>
               <Link to="/scroll-to-index">Scroll to Index</Link>
             </dd>
-            <dd>
-              <Link to="/custom-scroll-container">
-                Custom Scroll Container
-              </Link>
-            </dd>
             <dt>Grouping</dt>
             <dd>
               <Link to="/grouped-numbers">Grouped Numbers</Link>
@@ -87,6 +82,23 @@ export default ({ children, sidebar }) => (
             </dd>
             <dd>
               <Link to="/endless-scrolling">Endless Scrolling</Link>
+            </dd>
+            <dd>
+              <Link to="/material-ui-endless-scrolling">
+                Material UI
+              </Link>
+            </dd>
+
+            <dt>Customizing Markup</dt>
+            <dd>
+              <Link to="/custom-scroll-container">
+                Custom Scroll Container
+              </Link>
+            </dd>
+            <dd>
+              <Link to="/customize-structure">
+                Customize Rendering
+              </Link>
             </dd>
           </dl>
         </nav>
