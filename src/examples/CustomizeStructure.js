@@ -1,11 +1,11 @@
 import React from 'react'
 import { GroupedVirtuoso } from 'react-virtuoso'
 
-const ListContainer = ({ listRef, children, className }) => (
+const ListContainer = ({ listRef, children, className, style }) => (
   <ul
     ref={listRef}
     className={className}
-    style={{ marginTop: 0, marginBottom: 0 }}
+    style={{ ...style, marginTop: 0, marginBottom: 0 }}
   >
     {children}
   </ul>
@@ -13,8 +13,11 @@ const ListContainer = ({ listRef, children, className }) => (
 
 const ItemContainer = props => <li {...props} style={{ margin: 0 }} />
 
-const GroupContainer = ({ children, ...props }) => (
-  <li {...props} style={{ margin: 0, backgroundColor: 'white' }}>
+const GroupContainer = ({ children, style, ...props }) => (
+  <li
+    {...props}
+    style={{ ...style, margin: 0, backgroundColor: 'white' }}
+  >
     <strong>{children}</strong>
     <hr />
   </li>

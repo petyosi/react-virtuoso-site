@@ -131,10 +131,11 @@ export default () => {
       FooterContainer={({ footerRef, children }) => (
         <ListItem ref={footerRef}>{children}</ListItem>
       )}
-      ListContainer={({ listRef, className, children }) => {
+      ListContainer={({ listRef, className, style, children }) => {
         return (
           <List
             ref={listRef}
+            style={style}
             className={[className, classes.list].join(' ')}
           >
             {children}
@@ -142,25 +143,30 @@ export default () => {
         )
       }}
       ItemContainer={({ children, ...props }) => {
-        return <ListItem {...props}>{children}</ListItem>
+        return (
+          <ListItem {...props} style={{ margin: 0 }}>
+            {children}
+          </ListItem>
+        )
       }}
-      GroupContainer={({ children, className, ...props }) => (
+      GroupContainer={({ children, className, style, ...props }) => (
         <ListSubheader
           {...props}
           className={[className, classes.header].join(' ')}
           disableSticky={true}
+          style={{ ...style, margin: 0 }}
         >
           {children}
         </ListSubheader>
       )}
       className={classes.root}
-      style={{ height: '550px', width: '400px' }}
+      style={{ height: '350px', width: '400px' }}
       groupCounts={groupCounts}
       group={index => <div>Group {groups[index]}</div>}
       endReached={loadMore}
       overscan={400}
-      scrollingStateChange={scrolling => {
-        setIsScrolling(scrolling)
+      scrollingStateChange={_ => {
+        // setIsScrolling(scrolling)
       }}
       item={index => (
         <>
