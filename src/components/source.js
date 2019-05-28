@@ -46,6 +46,8 @@ ReactDOM.render(<Example />, document.getElementById('root'))
       description: 'Created with <3 by the StackBlitz SDK!',
       template: 'create-react-app',
       dependencies: {
+        react: 'latest',
+        'react-dom': 'latest',
         'react-virtuoso': 'latest',
         faker: '4.1.0',
         lodash: '4.17.11',
