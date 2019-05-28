@@ -85,7 +85,7 @@ export default ({ children, sidebar }) => (
             </dd>
             <dd>
               <Link to="/material-ui-endless-scrolling">
-                Material UI
+                Material-UI
               </Link>
             </dd>
 
