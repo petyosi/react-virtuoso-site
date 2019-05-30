@@ -38,65 +38,67 @@ export default ({ children, sidebar }) => (
             </dd>
             <dt>Features Overview</dt>
             <dd>
-              <Link to="/hello" activeClassName="active">
+              <Link to="/hello/" activeClassName="active">
                 10000 Items
               </Link>
             </dd>
             <dd>
-              <Link to="/top-items" activeClassName="active">
+              <Link to="/top-items/" activeClassName="active">
                 Top Items
               </Link>
             </dd>
             <dd>
-              <Link to="/footer">Footer</Link>
+              <Link to="/footer/">Footer</Link>
             </dd>
             <dd>
-              <Link to="/auto-resizing">Auto Resizing</Link>
+              <Link to="/auto-resizing/">Auto Resizing</Link>
             </dd>
             <dd>
-              <Link to="/scroll-handling">Scroll Handling</Link>
+              <Link to="/scroll-handling/">Scroll Handling</Link>
             </dd>
             <dd>
-              <Link to="/scroll-to-index">Scroll to Index</Link>
+              <Link to="/scroll-to-index/">Scroll to Index</Link>
             </dd>
             <dt>Grouping</dt>
             <dd>
-              <Link to="/grouped-numbers">Grouped Numbers</Link>
+              <Link to="/grouped-numbers/">Grouped Numbers</Link>
             </dd>
             <dd>
-              <Link to="/grouped-by-first-letter">
+              <Link to="/grouped-by-first-letter/">
                 Grouped by First Letter
               </Link>
             </dd>
             <dd>
-              <Link to="/grouped-with-load-on-demand">
+              <Link to="/grouped-with-load-on-demand/">
                 Grouped with Load on Demand
               </Link>
             </dd>
             <dd>
-              <Link to="/scroll-to-group">Scroll to Group</Link>
+              <Link to="/scroll-to-group/">Scroll to Group</Link>
             </dd>
             <dt>Scenarios</dt>
             <dd>
-              <Link to="/press-to-load-more">Press to Load More</Link>
+              <Link to="/press-to-load-more/">
+                Press to Load More
+              </Link>
             </dd>
             <dd>
-              <Link to="/endless-scrolling">Endless Scrolling</Link>
+              <Link to="/endless-scrolling/">Endless Scrolling</Link>
             </dd>
             <dd>
-              <Link to="/material-ui-endless-scrolling">
+              <Link to="/material-ui-endless-scrolling/">
                 Material-UI
               </Link>
             </dd>
 
             <dt>Customizing Markup</dt>
             <dd>
-              <Link to="/custom-scroll-container">
+              <Link to="/custom-scroll-container/">
                 Custom Scroll Container
               </Link>
             </dd>
             <dd>
-              <Link to="/customize-structure">
+              <Link to="/customize-structure/">
                 Customize Rendering
               </Link>
             </dd>
