@@ -154,7 +154,7 @@ export default () => {
           {...props}
           className={[className, classes.header].join(' ')}
           disableSticky={true}
-          style={{ ...style, margin: 0 }}
+          style={{ ...style, marginBottom: 0 }}
         >
           {children}
         </ListSubheader>

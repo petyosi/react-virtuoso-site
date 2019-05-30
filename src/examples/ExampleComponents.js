@@ -32,6 +32,7 @@ export const ExampleListItem = styled.div`
   display: flex;
   padding: 12px;
   color: #333;
+  font-size: 14px;
 `
 
 export const ExampleGroup = styled.div`
@@ -44,7 +45,7 @@ export const ExampleGroup = styled.div`
 export const ExampleUserInfo = ({ title, children }) => {
   return (
     <div style={{ marginLeft: '1rem' }}>
-      <h3 style={{ marginTop: 0 }}>{title}</h3>
+      <h3 style={{ marginTop: 0, marginBottom: '10px' }}>{title}</h3>
       <p style={{ marginBottom: 0 }}>{children}</p>
     </div>
   )
