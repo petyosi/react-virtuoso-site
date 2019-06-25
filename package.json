@@ -1,6 +1,6 @@
 {
   "name": "react-virtuoso-site",
-  "private": false,
+  "private": true,
   "description": "The site and examples for virtuoso.dev",
   "version": "0.1.0",
   "license": "MIT",
