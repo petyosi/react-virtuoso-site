@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import GitHubButton from 'react-github-btn'
-import { TwitterFollowButton } from 'react-twitter-embed'
 import logo from '../assets/logo.svg'
 import '../styles/site.css'
 
@@ -39,7 +37,7 @@ export default ({ children, sidebar }) => (
             <dt>Features Overview</dt>
             <dd>
               <Link to="/hello/" activeClassName="active">
-                10000 Items
+                100 000 Items
               </Link>
             </dd>
             <dd>
@@ -105,21 +103,31 @@ export default ({ children, sidebar }) => (
           </dl>
         </nav>
 
-        <div style={{ margin: '0 2rem 0 2rem' }}>
-          <GitHubButton
-            href="https://github.com/petyosi/react-virtuoso"
-            data-size="large"
-            data-show-count="true"
-            aria-label="Star petyosi/react-virtuoso on GitHub"
-          >
-            Star
-          </GitHubButton>
-        </div>
-        <div style={{ margin: '2rem 2rem 0 2rem' }}>
-          <TwitterFollowButton screenName={'petyosi'} />
-        </div>
-        <div style={{ margin: '1rem 2rem 0 2rem' }}>
-          <img src="https://flat.badgen.net/bundlephobia/minzip/react-virtuoso" />
+        <div style={{ marginLeft: '2rem' }}>
+          <div>
+            <a
+              href="https://github.com/petyosi/react-virtuoso"
+              title="Star the project on Github"
+            >
+              <img src="https://badgen.net/github/stars/petyosi/react-virtuoso" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://twitter.com/petyosi"
+              title="Follow me on twitter for Virtuoso updates"
+            >
+              <img src="https://badgen.net/twitter/follow/petyosi" />
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://bundlephobia.com/result?p=react-virtuoso@0.7.0"
+              title="Bundlephobia size report"
+            >
+              <img src="https://badgen.net/bundlephobia/minzip/react-virtuoso" />
+            </a>
+          </div>
         </div>
       </div>
 

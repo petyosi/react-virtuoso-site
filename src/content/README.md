@@ -234,6 +234,4 @@ To avoid that, if you are putting paragraphs and headings inside the `item`, mak
 
 ## Browser Support
 
-Virtuoso uses `position: sticky` to keep the virtual viewport at top of the scroller.
-[This does not work in IE 11](https://caniuse.com/#feat=css-sticky).
-Please open an issue (or even, PR) if you need this - it should be possible to implement a fallback mechanism using `position: absolute`.
+When in grouped mode, Virtuoso uses `position: sticky` to keep the virtual viewport at top of the scroller. [This does not work in IE 11](https://caniuse.com/#feat=css-sticky).
