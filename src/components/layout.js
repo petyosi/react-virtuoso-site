@@ -107,6 +107,21 @@ export default ({ children, sidebar }) => (
                 Customize Rendering
               </Link>
             </dd>
+
+            <dt>API Reference</dt>
+            <dd>
+              <Link to="/virtuoso-api-reference/">Virtuoso</Link>
+            </dd>
+            <dd>
+              <Link to="/grouped-virtuoso-api-reference/">
+                Grouped Virtuoso
+              </Link>
+            </dd>
+            <dd>
+              <Link to="/virtuoso-grid-api-reference/">
+                Virtuoso Grid
+              </Link>
+            </dd>
           </dl>
         </nav>
 

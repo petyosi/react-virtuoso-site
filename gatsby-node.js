@@ -17,16 +17,40 @@ module.exports = {
       Query: {
         readme: {
           type: `String!`,
-          resolve: (source, args, context, info) => {
+          resolve: () => {
             return fs
               .readFileSync(`./src/content/README.md`)
+              .toString()
+          },
+        },
+        virtuosoApi: {
+          type: `String!`,
+          resolve: () => {
+            return fs
+              .readFileSync(`./src/content/virtuoso-api.md`)
+              .toString()
+          },
+        },
+        groupedVirtuosoApi: {
+          type: `String!`,
+          resolve: () => {
+            return fs
+              .readFileSync(`./src/content/grouped-virtuoso-api.md`)
+              .toString()
+          },
+        },
+        virtuosoGridApi: {
+          type: `String!`,
+          resolve: () => {
+            return fs
+              .readFileSync(`./src/content/virtuoso-grid-api.md`)
               .toString()
           },
         },
 
         allSources: {
           type: `[Source!]!`,
-          resolve: (source, args, context, info) => {
+          resolve: () => {
             return fs.readdirSync('./src/examples/').map(fileName => {
               const key = fileName.split('.')[0]
               const source = fs
