@@ -74,6 +74,13 @@ export default ({ children, sidebar }) => (
             <dd>
               <Link to="/scroll-to-group/">Scroll to Group</Link>
             </dd>
+            <dt>Grid</dt>
+            <dd>
+              <Link to="/grid-responsive-columns/">
+                Responsive columns
+              </Link>
+            </dd>
+
             <dt>Scenarios</dt>
             <dd>
               <Link to="/press-to-load-more/">
