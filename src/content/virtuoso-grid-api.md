@@ -32,7 +32,17 @@ Optional; sets the CSS class of the outermost element of the component.
 ### `ScrollContainer?: TScrollContainer`
 
 Optional. Can be used to replace and extend the scrollable element of the component.
-Check the [custom scroll container](/custom-scroll-container) for sample usage.
+Check the [custom scroll container](/custom-scroll-container) for an example.
+
+### `ItemContainer?: React.ComponentType | string`
+
+Optional. Can be used to replace and extend the individual item container of the component.
+Check the [custom scroll container](/grid-responsive-columns) for an example.
+
+### `ListContainer?: React.ComponentType | string`
+
+Optional. Can be used to replace and extend the list container of the component.
+Check the [custom scroll container](/grid-responsive-columns) for an example.
 
 ### `scrollingStateChange?: (isScrolling: boolean) => void`
 

@@ -59,7 +59,7 @@ examples.
 ### Grid
 
 The `VirtuosoGrid` component displays **same sized items** in multiple columns.
-The layout and item sizing is controlled through CSS class properties, which allows you to use media queries, min-width, percentage, etc.
+The layout and item sizing is controlled CSS class properties or styled containers, which allows you to use media queries, min-width, percentage, etc.
 
 Check the [responsive grid columns](/grid-responsive-columns) example for a sample implementation.
 

@@ -5,7 +5,17 @@ import Example from '../examples/GridResponsiveColumns'
 import { Helmet } from 'react-helmet'
 
 export default () => (
-  <Layout sidebar={() => <Source path="GridResponsiveColumns" />}>
+  <Layout
+    sidebar={() => (
+      <Source
+        libs={{
+          '@emotion/core': '^10.0.14',
+          '@emotion/styled': '^10.0.14',
+        }}
+        path="GridResponsiveColumns"
+      />
+    )}
+  >
     <Helmet>
       <meta
         name="description"
@@ -21,10 +31,12 @@ export default () => (
 
     <p>
       The component provides no styling out of the box; the styling
-      and the layout of the items should be specified by passing two
+      and the layout of the items can be specified by passing two
       properties - <code>itemClassName</code> and{' '}
-      <code>listClassName</code>. It is up to you to implement the
-      layout with{' '}
+      <code>listClassName</code>. Alternatively, you can use styled
+      components and pass them as <code>ItemContainer</code> and{' '}
+      <code>ListContainer</code>. Either way, it is up to you to
+      implement the layout with{' '}
       <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
         Flexbox
       </a>{' '}

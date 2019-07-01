@@ -1,8 +1,8 @@
 import React from 'react'
-import { css } from 'emotion'
+import styled from '@emotion/styled'
 import { VirtuosoGrid } from 'react-virtuoso'
 
-const itemClass = css`
+const ItemContainer = styled.div`
   padding: 0.5rem;
   width: 25%;
   background: #f5f5f5;
@@ -21,8 +21,9 @@ const itemClass = css`
   @media (max-width: 480px) {
     width: 100%;
   }
+`
 
-  div {
+const ItemWrapper = styled.div`
     flex: 1;
     text-align: center;
     font-size: 80%;
@@ -32,7 +33,7 @@ const itemClass = css`
   }
 `
 
-const listClass = css`
+const ListContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
@@ -41,9 +42,9 @@ export default () => (
   <VirtuosoGrid
     totalCount={10000}
     overscan={200}
-    itemClassName={itemClass}
-    listClassName={listClass}
-    item={index => <div>Item {index}</div>}
+    ItemContainer={ItemContainer}
+    ListContainer={ListContainer}
+    item={index => <ItemWrapper>Item {index}</ItemWrapper>}
     style={{ height: '500px', width: '100%' }}
   />
 )
