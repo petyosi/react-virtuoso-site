@@ -5,7 +5,7 @@ const ListContainer = ({ listRef, children, className, style }) => (
   <ul
     ref={listRef}
     className={className}
-    style={{ ...style, marginTop: 0, marginBottom: 0 }}
+    style={{ ...style, marginBottom: 0 }}
   >
     {children}
   </ul>
@@ -16,7 +16,7 @@ const ItemContainer = props => <li {...props} style={{ margin: 0 }} />
 const GroupContainer = ({ children, style, ...props }) => (
   <li
     {...props}
-    style={{ ...style, margin: 0, backgroundColor: 'white' }}
+    style={{ ...style, marginBottom: 0, backgroundColor: 'white' }}
   >
     <strong>{children}</strong>
     <hr />
