@@ -25,6 +25,10 @@ Optional. Defines content to be rendered at the bottom of the list.
 
 Optional. Causes the component to render extra content in addition to the necessary one to fill in the visible viewport.
 
+### `initialItemCount?: number`
+
+Optional, use if you are using server-side rendering (SSR) and would like to have some amount of items initially rendered regardless of the item/container size.
+
 ### `endReached?: (index: number) => void`
 
 Gets called when the user scrolls to the end of the list.
