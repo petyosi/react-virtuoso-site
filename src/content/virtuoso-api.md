@@ -34,6 +34,10 @@ Optional, use if you are using server-side rendering (SSR) and would like to hav
 Gets called when the user scrolls to the end of the list.
 Receives the last item index as an argument. Can be used to implement [endless scrolling](/endless-scrolling).
 
+### `itemsRendered?: (items: Array<{ transposedIndex: number }>) => void`
+
+Optional. The callback is called with the new set of items each time the list items are redendered due to scrolling.
+
 ### `scrollingStateChange?: (isScrolling: boolean) => void`
 
 Gets called when the user starts / stops scrolling. Can be used to hide complex item contents during scrolling.

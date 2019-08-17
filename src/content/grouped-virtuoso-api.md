@@ -32,6 +32,12 @@ Works just like the `overscan` property of the flat component.
 
 Works just like the `endReached` callback of the flat component.
 
+### `itemsRendered?: (items: Array<{ transposedIndex: number, type: 'item', groupIndex: number } | { type: 'group', groupIndex: number }>) => void`
+
+Optional. The callback is called with the new set of items each time the list items are redendered due to scrolling. 
+
+The list contains both `type: "item"` and `type:"group"` records for regular and group items.
+
 ### `scrollingStateChange?: (isScrolling: boolean) => void`
 
 Works just like the `scrollingStateChange` callback of the flat component.
