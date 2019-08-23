@@ -29,19 +29,6 @@ Optional. Causes the component to render extra content in addition to the necess
 
 Optional, use if you are using server-side rendering (SSR) and would like to have some amount of items initially rendered regardless of the item/container size.
 
-### `endReached?: (index: number) => void`
-
-Gets called when the user scrolls to the end of the list.
-Receives the last item index as an argument. Can be used to implement [endless scrolling](/endless-scrolling).
-
-### `itemsRendered?: (items: Array<{ transposedIndex: number }>) => void`
-
-Optional. The callback is called with the new set of items each time the list items are redendered due to scrolling.
-
-### `scrollingStateChange?: (isScrolling: boolean) => void`
-
-Gets called when the user starts / stops scrolling. Can be used to hide complex item contents during scrolling.
-
 ### `itemHeight?: number`
 
 Can be used to improve performance if the rendered items are of known size. Setting it causes the component to skip item measurements. See the Tweaking Performance section for more details.
@@ -50,6 +37,30 @@ Can be used to improve performance if the rendered items are of known size. Sett
 
 Optional. Can be used to replace and extend the scrollable element of the component.
 Check the [custom scroll container](/custom-scroll-container) for sample usage.
+
+### `computeItemKey?: (index: number) => number`
+
+Optional - if specified, the component will use the provided function to generate the `key={}` property for each list item.
+
+## Callback Properties
+
+### `scrollingStateChange?: (isScrolling: boolean) => void`
+
+Gets called when the user starts / stops scrolling. Can be used to hide complex item contents during scrolling.
+
+### `endReached?: (index: number) => void`
+
+Gets called when the user scrolls to the end of the list.
+Receives the last item index as an argument. Can be used to implement [endless scrolling](/endless-scrolling).
+
+### `totalListHeightChanged?: (height: number) => void`
+
+Optional. Gets called each time the total height of the list gets re-computed. Notice that the value is just an estimate based on what's rendered so far.
+
+### `itemsRendered?: (items: Array<{ transposedIndex: number }>) => void`
+
+Optional. The callback is called with the new set of items each time the list items are redendered due to scrolling.
+
 
 ## Methods
 
