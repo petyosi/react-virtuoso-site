@@ -9,7 +9,7 @@ export default ({ children, sidebar }) => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>
-        React Virtuoso - virtual list component + batteries included
+        React Virtuoso: virtual list component + batteries included
       </title>
       <meta
         name="keywords"
@@ -46,64 +46,131 @@ export default ({ children, sidebar }) => (
               </Link>
             </dd>
             <dd>
-              <Link to="/footer/">Footer</Link>
+              <Link to="/footer/" activeClassName="active">
+                Footer
+              </Link>
             </dd>
             <dd>
-              <Link to="/auto-resizing/">Auto Resizing</Link>
+              <Link to="/auto-resizing/" activeClassName="active">
+                Auto Resizing
+              </Link>
             </dd>
             <dd>
-              <Link to="/scroll-handling/">Scroll Handling</Link>
+              <Link to="/scroll-handling/" activeClassName="active">
+                Scroll Handling
+              </Link>
             </dd>
             <dd>
-              <Link to="/scroll-to-index/">Scroll to Index</Link>
+              <Link to="/scroll-to-index/" activeClassName="active">
+                Scroll to Index
+              </Link>
             </dd>
+            <dd>
+              <Link to="/initial-index/" activeClassName="active">
+                Initial Index <sup>new</sup>
+              </Link>
+            </dd>
+            <dd>
+              <Link
+                to="/range-change-callback/"
+                activeClassName="active"
+              >
+                Range Change Callback <sup>new</sup>
+              </Link>
+            </dd>
+
             <dt>Grouping</dt>
             <dd>
-              <Link to="/grouped-numbers/">Grouped Numbers</Link>
+              <Link to="/grouped-numbers/" activeClassName="active">
+                Grouped Numbers
+              </Link>
             </dd>
             <dd>
-              <Link to="/grouped-by-first-letter/">
+              <Link
+                to="/grouped-by-first-letter/"
+                activeClassName="active"
+              >
                 Grouped by First Letter
               </Link>
             </dd>
             <dd>
-              <Link to="/grouped-with-load-on-demand/">
+              <Link
+                to="/grouped-with-load-on-demand/"
+                activeClassName="active"
+              >
                 Grouped with Load on Demand
               </Link>
             </dd>
             <dd>
-              <Link to="/scroll-to-group/">Scroll to Group</Link>
+              <Link to="/scroll-to-group/" activeClassName="active">
+                Scroll to Group
+              </Link>
             </dd>
             <dt>Grid</dt>
             <dd>
-              <Link to="/grid-responsive-columns/">
+              <Link
+                to="/grid-responsive-columns/"
+                activeClassName="active"
+              >
                 Responsive columns
               </Link>
             </dd>
 
             <dt>Scenarios</dt>
             <dd>
-              <Link to="/press-to-load-more/">
+              <Link
+                to="/press-to-load-more/"
+                activeClassName="active"
+              >
                 Press to Load More
               </Link>
             </dd>
             <dd>
-              <Link to="/endless-scrolling/">Endless Scrolling</Link>
+              <Link to="/endless-scrolling/" activeClassName="active">
+                Endless Scrolling
+              </Link>
             </dd>
             <dd>
-              <Link to="/material-ui-endless-scrolling/">
+              <Link to="/prepend-items" activeClassName="active">
+                Prepend Items <sup>new</sup>
+              </Link>
+            </dd>
+            <dd>
+              <Link to="/stick-to-bottom" activeClassName="active">
+                Stick to Bottom <sup>new</sup>
+              </Link>
+            </dd>
+            <dd>
+              <Link
+                to="/scroll-seek-placeholders"
+                activeClassName="active"
+              >
+                Scroll Seek Placeholders <sup>new</sup>
+              </Link>
+            </dd>
+            <dd>
+              <Link
+                to="/material-ui-endless-scrolling/"
+                activeClassName="active"
+              >
                 Material-UI
               </Link>
             </dd>
 
             <dt>Customizing Markup</dt>
             <dd>
-              <Link to="/custom-scroll-container/">
+              <Link
+                to="/custom-scroll-container/"
+                activeClassName="active"
+              >
                 Custom Scroll Container
               </Link>
             </dd>
             <dd>
-              <Link to="/customize-structure/">
+              <Link
+                to="/customize-structure/"
+                activeClassName="active"
+              >
                 Customize Rendering
               </Link>
             </dd>
@@ -113,12 +180,18 @@ export default ({ children, sidebar }) => (
               <Link to="/virtuoso-api-reference/">Virtuoso</Link>
             </dd>
             <dd>
-              <Link to="/grouped-virtuoso-api-reference/">
+              <Link
+                to="/grouped-virtuoso-api-reference/"
+                activeClassName="active"
+              >
                 Grouped Virtuoso
               </Link>
             </dd>
             <dd>
-              <Link to="/virtuoso-grid-api-reference/">
+              <Link
+                to="/virtuoso-grid-api-reference/"
+                activeClassName="active"
+              >
                 Virtuoso Grid
               </Link>
             </dd>

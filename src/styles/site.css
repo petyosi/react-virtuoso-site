@@ -57,6 +57,10 @@ code[class*='language-'] {
   flex-shrink: 0;
 }
 
+#nav sup {
+  color: #e83e8c;
+}
+
 a[aria-current*='page'] {
   color: #e83e8c;
   cursor: text;
