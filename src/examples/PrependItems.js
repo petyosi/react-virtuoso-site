@@ -31,6 +31,7 @@ export default () => {
     <div style={{ display: 'flex' }}>
       <div>
         <Virtuoso
+          ref={virtuoso}
           totalCount={users.length}
           item={index => (
             <UserItem user={users[index]} index={index} />

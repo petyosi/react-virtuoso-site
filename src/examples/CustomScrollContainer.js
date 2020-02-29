@@ -29,7 +29,7 @@ const MyScrollContainer = ({
   const elRef = useRef(null)
 
   scrollTo(scrollTop => {
-    elRef.scrollTo({ top: scrollTop })
+    elRef.current.scrollTo({ top: scrollTop })
   })
 
   return (
