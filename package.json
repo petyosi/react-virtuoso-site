@@ -27,6 +27,7 @@
     "react-dom": "link:../lib/node_modules/react-dom",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",
+    "react-sortable-hoc": "^1.11.0",
     "react-twitter-embed": "^2.0.8",
     "react-typography": "^0.16.19",
     "react-virtuoso": "link:../lib",

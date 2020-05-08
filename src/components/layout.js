@@ -156,6 +156,14 @@ export default ({ children, sidebar }) => (
                 Material-UI
               </Link>
             </dd>
+            <dd>
+              <Link
+                to="/react-sortable-hoc/"
+                activeClassName="active"
+              >
+                Integration with React Sortable HOC
+              </Link>
+            </dd>
 
             <dt>Customizing Markup</dt>
             <dd>

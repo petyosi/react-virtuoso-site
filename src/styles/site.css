@@ -1,8 +1,8 @@
 html,
 body,
-body > div,
-body > div > div,
-body > div > div > div {
+body > div.___gatsby,
+body > div.___gatsby > div,
+body > div.___gatsby > div > div {
   margin: 0;
   padding: 0;
   height: 100%;
