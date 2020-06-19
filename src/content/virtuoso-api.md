@@ -23,7 +23,7 @@ Optional. Defines content to be rendered at the bottom of the list.
 
 ### `overscan?: number`
 
-Optional. Causes the component to render extra content in addition to the necessary one to fill in the visible viewport.
+Optional. Amount extra content (in pixels) to render in addition to what is necessary to fill in the visible viewport.
 
 ### `initialItemCount?: number`
 
