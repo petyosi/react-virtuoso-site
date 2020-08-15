@@ -44,10 +44,14 @@ By default, the component assumes the default item height from the first rendere
 If the first item turns out to be an outlier (very short or tall), the rest of the rendering will be slower, as multiple passes of rendering should happen for the list to fill the viewport.
 Setting this property causes the component to skip the "probe" rendering and use the property value instead.
 
-### `ScrollContainer: React.FC`
+### `ScrollContainer?: React.FC`
 
 Optional. Can be used to replace and extend the scrollable element of the component.
 Check the [custom scroll container](/custom-scroll-container) for sample usage.
+
+### `emptyComponent?: React.ComponentType`
+
+Optional. Displayed when the list has no items.
 
 ### `computeItemKey?: (index: number) => number`
 
@@ -86,6 +90,10 @@ interface ScrollSeekConfiguration {
 ### `scrollingStateChange?: (isScrolling: boolean) => void`
 
 Gets called when the user starts / stops scrolling. Can be used to hide complex item contents during scrolling.
+
+### `startReached?: () => void`
+
+Gets called when the user scrolls to the start of the list.
 
 ### `endReached?: (index: number) => void`
 
